@@ -1,20 +1,14 @@
 class Solution {
     public ArrayList<Integer> getMinMax(int[] arr) {
         // code Here
-        ArrayList<Integer> list = new ArrayList<>();
-        int min = Integer.MAX_VALUE;
-        for(int num : arr){
-            if(num<min)
-            min = num;
-        }
-        int max = Integer.MIN_VALUE;
-        for(int num : arr){
-            if(num>max)
-            max = num;
-        }
-        list.add(min);
-        list.add(max);
-        
+        //sort the array so that we can get the increased order of the elements 
+        Arrays.sort(arr);
+        // create the array list 
+        ArrayList<Integer>list=new ArrayList<>();
+        // add elements to the array list first was min and last was the maximum 
+        list.add(arr[0]);
+        list.add(arr[arr.length-1]);
         return list ;
+        
     }
 }
