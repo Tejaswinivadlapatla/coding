@@ -31,23 +31,27 @@ Explanation: There are 2 odd elements (1, 1) and no even elements.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-03T16:57:01.241Z  
+**Submitted:** 2026-08-04T16:25:44.331Z  
 
 ```java
 class Solution {
     public int[] countOddEven(int[] arr) {
         // Code here
-        int even = 0;
-        int odd = 0;
-        for(int num : arr){
+        int odd = 0 ;
+        int even = 0 ;
+        for (int num : arr  ){
             if(num %2 == 0){
                 even++;
             }
             else{
-                odd ++ ;
+                odd++;
             }
         }
-        return  new int[]{odd, even};
+        int ans [] = new int[2];
+        ans[0]=odd;
+        ans[1]=even;
+        return ans ;
+
     }
 }
 ```
