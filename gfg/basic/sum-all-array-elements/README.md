@@ -31,17 +31,18 @@ Explanation: 1 + 3 + 3 = 7.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-03T09:03:53.994Z  
+**Submitted:** 2026-08-04T15:56:15.781Z  
 
 ```java
 class Solution {
     public int arraySum(int arr[]) {
         // code here
-        int sum = 0;
-        for(int num : arr){
+        int sum = 0 ;
+        for (int num : arr){
             sum = sum+num;
+            
         }
-        return sum;
+        return sum ;
     }
 }
 
