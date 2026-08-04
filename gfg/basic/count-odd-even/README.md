@@ -31,12 +31,14 @@ Explanation: There are 2 odd elements (1, 1) and no even elements.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-04T16:25:44.331Z  
+**Submitted:** 2026-08-04T16:27:24.806Z  
 
 ```java
 class Solution {
     public int[] countOddEven(int[] arr) {
         // Code here
+        //initially we initialized the odd and even was 0 
+        // then if condition was satisfied we incremented the count
         int odd = 0 ;
         int even = 0 ;
         for (int num : arr  ){
@@ -47,6 +49,7 @@ class Solution {
                 odd++;
             }
         }
+        //created the new array and added the odd and even in that 
         int ans [] = new int[2];
         ans[0]=odd;
         ans[1]=even;
