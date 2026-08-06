@@ -45,9 +45,9 @@ myHashSet.contains(2); // return False, (already removed)
 ## Solution
 
 **Language:** Java  
-**Runtime:** 13 ms (beats 65.41%)  
-**Memory:** 53.9 MB (beats 33.60%)  
-**Submitted:** 2026-08-06T16:44:41.113Z  
+**Runtime:** 12 ms (beats 97.44%)  
+**Memory:** 53.8 MB (beats 33.60%)  
+**Submitted:** 2026-08-06T16:45:06.226Z  
 
 ```java
 class MyHashSet {
