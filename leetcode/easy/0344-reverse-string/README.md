@@ -37,21 +37,23 @@ Output: ["h","a","n","n","a","H"]
 
 **Language:** Java  
 **Runtime:** 4 ms (beats 5.32%)  
-**Memory:** 48.1 MB (beats 88.86%)  
-**Submitted:** 2026-08-20T17:06:54.878Z  
+**Memory:** 48 MB (beats 88.86%)  
+**Submitted:** 2026-08-20T17:17:06.472Z  
 
 ```java
 class Solution {
     public void reverseString(char[] s) {
-        char[] arr = new char[s.length];
-        int n =s.length-1;
-        for (int i=0;i<s.length;i++){
-            arr[i]=s[n-i];
-            
-        }
-        //why again i wrote the for loop : leetcode does not check the arr it checks only the s so we changed it again 
-        for (int j=0;j<s.length;j++){
-            s[j]=arr[j];            
+        // by using two pointers approach
+        int left = 0 ;
+        int right = s.length-1;
+        for(int i = 0;i<s.length-1;i++){
+            while(left<right){// if it meets the midpoint it stops the poniter moving
+            char temp = s[right];
+            s[right] = s[left];
+            s[left] = temp;
+            left++;
+            right--;
+            }
         }
         System.out.println(s);
     }
