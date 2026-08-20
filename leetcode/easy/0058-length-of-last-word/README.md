@@ -49,8 +49,8 @@ Explanation: The last word is "joyboy" with length 6.
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 28.21%)  
-**Memory:** 43.3 MB (beats 6.14%)  
-**Submitted:** 2026-08-20T17:32:37.131Z  
+**Memory:** 43.1 MB (beats 52.25%)  
+**Submitted:** 2026-08-20T17:34:47.912Z  
 
 ```java
 class Solution {
@@ -60,7 +60,7 @@ class Solution {
         int n =words.length-1;
         int max = 0 ;
         // they are asking the last word so iterated to the last word and finally returned the sizr of last words
-        for(int i = 0 ; i<=words.length-1;i++){
+        for(int i = words.length-1 ; i>=0;i--){
            max = words[n].length();
         }
         return max;
