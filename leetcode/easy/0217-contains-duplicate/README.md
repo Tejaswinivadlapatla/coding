@@ -44,22 +44,27 @@ All elements are distinct.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 21 ms (beats 34.98%)  
-**Memory:** 108.4 MB (beats 27.55%)  
-**Submitted:** 2026-08-22T04:58:23.330Z  
+**Runtime:** 19 ms (beats 47.65%)  
+**Memory:** 111.4 MB (beats 5.20%)  
+**Submitted:** 2026-08-22T05:01:39.669Z  
 
 ```java
 class Solution {
     public boolean containsDuplicate(int[] nums) {
-        HashSet<Integer> set = new HashSet<>();
-        for(int i =0;i<nums.length;i++){
-            if(set.contains(nums[i])){
-                return true;//will return true if we are having the element already in the set 
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for(int i = 0; i < nums.length; i++) {
+
+            if(map.containsKey(nums[i])) {
+                return true;
             }
-            set.add(nums[i]);//adding nums to hashset
+            else {
+                map.put(nums[i], 1);
+            }
         }
+
         return false;
-        
     }
 }
 ```
