@@ -41,20 +41,22 @@ Explanation: There is no i and j that satisfy the conditions.
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-09-18T12:04:51.073Z  
+**Memory:** 42 MB  
+**Submitted:** 2026-09-18T12:16:56.819Z  
 
 ```java
 class Solution {
     public boolean checkIfExist(int[] arr) {
-        for(int i=0 ; i<=arr.length-1;i++){
-            for(int j=0 ;j<=arr.length-1;j++){
-                if((arr[j]*2)==arr[i]){
-                    return true;
-                }
-            }
-        }
-        return false;
+       HashSet<Integer> set = new HashSet<>();
+       for(int i=0 ; i<=arr.length-1;i++){
+        set.add(arr[i]);
+        if(set.contains(arr[i]*2)){
+        return true;
+       }
+    
+       }
+       
+       return false;
     }
 }
 ```
