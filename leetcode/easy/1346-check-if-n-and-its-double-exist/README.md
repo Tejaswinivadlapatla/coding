@@ -41,8 +41,8 @@ Explanation: There is no i and j that satisfy the conditions.
 
 **Language:** Java  
 **Runtime:** 2 ms (beats 96.69%)  
-**Memory:** 44.8 MB (beats 34.37%)  
-**Submitted:** 2026-09-18T12:20:33.926Z  
+**Memory:** 45.2 MB (beats 7.93%)  
+**Submitted:** 2026-09-18T12:22:06.284Z  
 
 ```java
 class Solution {
