@@ -55,9 +55,9 @@ The array remains the same when reversed. Thus, `ans = [1, 1]`.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-09-20T09:03:19.142Z  
+**Runtime:** 1 ms (beats 98.13%)  
+**Memory:** 47 MB (beats 95.01%)  
+**Submitted:** 2026-09-20T09:03:24.437Z  
 
 ```java
 class Solution {
