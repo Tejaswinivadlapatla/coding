@@ -55,9 +55,9 @@ The array remains the same when reversed. Thus, `ans = [1, 1]`.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 98.13%)  
-**Memory:** 47.4 MB (beats 44.67%)  
-**Submitted:** 2026-09-20T09:02:39.996Z  
+**Runtime:** 0 ms  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-09-20T09:03:19.142Z  
 
 ```java
 class Solution {
@@ -66,6 +66,8 @@ class Solution {
         int n = nums.length;
         for(int i=0 ;i<=nums.length-1 ; i++){
             result[i] = nums[i];
+        }
+        for(int i=0 ;i<=nums.length-1 ; i++){
             result[n+i] = nums[n-1-i];
         }
         return result;
