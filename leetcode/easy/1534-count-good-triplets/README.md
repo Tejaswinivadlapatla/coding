@@ -48,9 +48,9 @@ Explanation: No triplet satisfies all conditions.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 14 ms (beats 26.25%)  
+**Runtime:** 10 ms (beats 95.39%)  
 **Memory:** 43 MB (beats 61.16%)  
-**Submitted:** 2026-09-23T06:27:17.797Z  
+**Submitted:** 2026-09-23T06:32:00.289Z  
 
 ```java
 class Solution {
@@ -58,12 +58,13 @@ class Solution {
         int count =0 ;
         for(int i=0 ; i<=arr.length-1 ; i++){
             for(int j=i+1 ; j <= arr.length-1 ; j++){
+                if(Math.abs(arr[i]-arr[j])<=a){// we will check first condition if it satisfies it will go to the next condition unless it will neglect that triplet , complexity will decrese 
                 for(int k=j+1 ; k<=arr.length-1;k++){
-                    // for loops will iterate all values in the array like the triplets in that by using the condition we will find the good triplets
-                    // abs is used for the positive numbers 
-                    if( Math.abs(arr[i] - arr[j] )<=a  && Math.abs(arr[j] - arr[k])<=b && Math.abs(arr[i] - arr[k]) <=c ){
+                    
+                    if(  Math.abs(arr[j] - arr[k])<=b && Math.abs(arr[i] - arr[k]) <=c ){
                     count ++; // for every good triplet count will increase
                     }
+                }
                 }
             }
         }
